@@ -15,6 +15,7 @@ In this project, we will try to create a time series model that predictss the lo
 
 
 
+
 ## Data Overview
 
 The aim of this Data Science projekt is a to predict Feed-In Managment events and the energy loss connected to these events. After cleaning, all data is available and consitent for the follwoing timespan:  `2018-01-01 06:00:00` until `2019-04-30 06:00:00`. 
