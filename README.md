@@ -3,8 +3,6 @@
 
 
 
-
-
 ## Business Context
 
 The term feed-in management refers to the curtailment of power that is fed into the power grid (‘available power’) (‘available power’) in dependence of the power that is actually used by connected consumers or is being transferred on to other grid areas (‘consumed power’). Both of these values need to be in a perfect balance for every 15 minute interval to ensure grid stability. Against this background, especially renewable energy systems like wind turbines pose a big challenge, since by default by default the power from these systems is very volatile. 
