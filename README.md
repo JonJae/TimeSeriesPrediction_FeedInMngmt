@@ -1,6 +1,6 @@
 # Quadra - Prediction of Renewable Power Loss caused by Feed-in Management Events
 
-
+ 
 
 
 ## Business Context
