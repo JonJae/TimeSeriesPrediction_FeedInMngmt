@@ -55,6 +55,6 @@ A detailed view for the same features below.
 
 ## Performance of the models
 
-The performance of the investigated prediction models are measured using the Mean Average Percentage Error (MAPE). Based on this metric, an LSTM is the best performing model. 
+The performance of the investigated prediction models are measured using the Mean Average Percentage Error (MAPE). Based on this metric, an LSTM is the best performing model.  
 
-<img src="./figures/results_MAPE.png" alt="results_MAPE" style="zoom:50%;" />
+<img src="./figures/results_MAPE.png" alt="results_MAPE" style="zoom:80%;" />
