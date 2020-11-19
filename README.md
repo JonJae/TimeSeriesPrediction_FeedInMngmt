@@ -1,17 +1,31 @@
 # Quadra - Prediction of Renewable Power Loss caused by Feed-in Management Events
 
- 
- 
+Final project at the Data Science Bootcamp **[@neuefische](www.neuefische.de)**. This project has been developed in 4 weeks in the fall of 2020 by [Tjade Appel](https://www.linkedin.com/in/tjade-appel/) and [Jonas Jaenicke](https://www.linkedin.com/in/jonasjaenicke/). Please feel free to contact us.  
+
+
+
 
 ## Business Context
 
-The term feed-in management refers to the curtailment of power that is fed into the power grid (‘available power’) (‘available power’) in dependence of the power that is actually used by connected consumers or is being transferred on to other grid areas (‘consumed power’). Both of these values need to be in a perfect balance for every 15 minute interval to ensure grid stability. Against this background, especially renewable energy systems like wind turbines pose a big challenge, since by default by default the power from these systems is very volatile. 
+The term feed-in management refers to the curtailment of power that is fed into the power grid in dependence of the power that is actually used by connected consumers or is being transferred on to other grid areas (`consumed power`). Both, the available and the consumed power, need to be in a perfect balance for every 15 minute interval to ensure grid stability. Against this background, especially renewable energy systems like wind turbines pose a big challenge, since by default the power from these systems is very volatile. Feed-in management is organized and ordered by the Transmission System Operators (TSOs) (TenneT TSO GmbH for the discussed wind farm). With the aid of feed-in management, grid operating  resources such as overhead lines or transformers are protected from overloads. 
+
+In the context of the so-called smart grid, the intelligent management of electricity demand, also referred to as demand side management (DSM), has been recognized as an effective approach to increase the use of renewable energy using energy that otherwise potentially be curtailed in an feed-in managment event. 
 
 
 
 ## Goal
 
-In this project, we will try to create a time series model that predictss the lost power for the next control interval(s) in dependence of parameters in the past. This might be useful for energy traders as well as the people in charge of guaranteeing grid stability.
+The result of this project is a deep learning model that predicts lost power for the next control interval(s) in dependence of various parameters in the past. This is useful for energy traders, grid operators as well as consumers who participate in Demand-Side-Managment. 
+
+
+
+## Repo Organisation
+
+- [FeedInMngmt_presentation.pdf](FeedInMngmt_LSTM.ipynb): Presentation of the project including additional explenation about the feed-in managment sitatuion. 
+- [FeedInMngmt_EDA.ipynb](FeedInMngmt_EDA.ipynb): Loading and pre-processing feed-in managment data as well as weather data, price data and energy consumption data. Followed by an exploration of the given Data as well as an investigation of correlating behaivoir of various time series (e.g., the influence of wind on feed in management events). This document ends with a ranking and selection of features by their importance.  
+- [FeedInMngmt_ML.ipynb](FeedInMngmt_ML.ipynb): Creation and elaboration of train-validation-test split as well as design of two Naïve base-line models: the shift model (e.g., the next timestep equals the last time step ) and an  Exponential Smoothing model (e.g., next timestep equals the moving average over the last X hours). In addition, functions to evaluate the the results are described in this document.  
+- [FeedInMngmt_Prophet.ipynb](FeedInMngmt_Prophet.ipynb): Implementation, tuning and evaluation of a FB Prophet Model for for prediction of one timestep and multiple timesteps into the future. 
+- [FeedInMngmt_LSTM.ipynb](FeedInMngmt_LSTM.ipynb): Implementation, tuning and evaluation of a Long-Short-Term-Memory Recurrent Neural Network for prediction of one timestep and multiple timesteps into the future. 
 
 
 
@@ -23,6 +37,14 @@ The  target data (`target_losses_norm`) for this timespan looks as followed.
 
 <img src="./figures/overview_target.png" style="zoom:80%;" />
 
-In addition to the target data (endogenous variable), various meteorological parameters obtained from a  numerical weather model (GFS data, e.g., `t_100m_k`) are given (exogenous variables). In the  following graphs example Exogenous Features are shown in their variation over time. 
+In addition to the target data (endogenous variable), various exogenous features are given. Meteorological parameters are obtained from a  numerical weather model (GFS data, e.g., `t_100m_k` as temperuter at 100m above ground). Furthermore, predictions are based on price data (e.g., `energyprice_euro_MWh`), energy consumption data (`NetConsumption_MW`) and engineered features (such as `working_day`). 
+
+In the  following graphs various exogenous features are shown in their variation over time. 
 
 <img src="./figures/overview_GFS.png" style="zoom:80%;" />
+
+
+
+## Model Design and Use Case overview: 
+
+<img src="./figures/workflow.png" alt="workflow" style="zoom:80%;" />
