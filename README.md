@@ -7,9 +7,9 @@ Final project at the Data Science Bootcamp **[@neuefische](www.neuefische.de)**.
 
 ## Business Context
 
-The term feed-in management refers to the curtailment of power that is fed into the power grid in dependence of the power that is actually used by connected consumers or is being transferred on to other grid areas (`consumed power`). Both, the available and the consumed power, need to be in a perfect balance for every 15 minute interval to ensure grid stability. Against this background, especially renewable energy systems like wind turbines pose a big challenge, since by default the power from these systems is very volatile. Feed-in management is organized and ordered by the Transmission System Operators (TSOs) (TenneT TSO GmbH for the discussed wind farm). With the aid of feed-in management, grid operating  resources such as overhead lines or transformers are protected from overloads. 
+The term feed-in management refers to the curtailment of power that is fed into the power grid in dependence of the power that is actually used by connected consumers or is being transferred on to other grid areas. Both, the available (`power_available_mw_obsnorm`) and the consumed (`power_mw_obsnorm`) power, need to be in a perfect balance for every 15 minute interval to ensure grid stability. Against this background, especially renewable energy systems like wind turbines pose a big challenge, since by default the power from these systems is very volatile. To protect grid infastructure (e.g., overhead lines or transformers) from overload, a curtailment of energy production takes place - so called feed-in management. Feed-in management is organized and ordered by the Transmission System Operators (TSOs) (TenneT TSO GmbH for the discussed wind farm). 
 
-In the context of the so-called smart grid, the intelligent management of electricity demand, also referred to as demand side management (DSM), has been recognized as an effective approach to increase the use of renewable energy using energy that otherwise potentially be curtailed in an feed-in managment event. 
+In the context of the so-called smart grid, the intelligent management of electricity demand, also referred to as demand side management (DSM), has been recognized as an effective approach to increase the use of renewable energy using energy that is otherwise potentially be curtailed in an feed-in managment event. 
 
 
 
@@ -41,10 +41,20 @@ In addition to the target data (endogenous variable), various exogenous features
 
 In the  following graphs various exogenous features are shown in their variation over time. 
 
-<img src="./figures/overview_GFS.png" style="zoom:80%;" />
+![data_overview1](./figures/data_overview1.png)
+
+A detailed view for the same features below. 
+
+<img src="./figures/data_overview2.png" style="zoom:80%;" />
 
 
 
 ## Model Design and Use Case overview: 
 
 <img src="./figures/workflow.png" alt="workflow" style="zoom:80%;" />
+
+## Performance of the models
+
+The performance of the investigated prediction models are measured using the Mean Average Percentage Error (MAPE). Based on this metric, an LSTM is the best performing model. 
+
+<img src="./figures/results_MAPE.png" alt="results_MAPE" style="zoom:50%;" />
