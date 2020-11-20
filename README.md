@@ -9,7 +9,9 @@ Final project at the Data Science Bootcamp **[@neuefische](www.neuefische.de)**.
 
 The term feed-in management refers to the curtailment of power that is fed into the power grid in dependence of the power that is actually used by connected consumers or is being transferred on to other grid areas. Both, the available and the consumed power, need to be in a perfect balance for every 15 minute interval to ensure grid stability. Against this background, especially renewable energy systems like wind turbines pose a big challenge, since by default the power from these systems is very volatile. To protect grid infastructure (e.g., overhead lines or transformers) from overload, a curtailment of energy production takes place - so called feed-in management.
 
-In the context of the so-called smart grid, the intelligent management of electricity demand, also referred to as demand side management (DSM), has been recognized as an effective approach to increase the use of renewable energy using energy that would otherwise potentially be curtailed in an feed-in managment event. 
+![balance](./figures/balance.png)
+
+In the context of the so-called smart grid, the intelligent management of electricity demand, also referred to as demand side management (DSM), has been recognized as an effective approach to increase the use of renewable energy using energy that would otherwise potentially be curtailed in an feed-in managment event. In order to schedule Demand Side Managment applications, a prediction of feed-in managment events is needed. 
 
 
 
@@ -49,7 +51,15 @@ A detailed view for the same features below.
 
 
 
-## Model Design and Use Case overview: 
+##  Use Case overview
+
+The developed model can potentially be used as part of a Demand Side Managment scheduling software. 
+
+<img src="/Users/jonasjaenicke/nf-sep-20/capstone/FeedInMngmt_prediction/figures/dsm_vis.png" alt="dsm_vis" style="zoom:80%;" />
+
+
+
+## Approach to model design
 
 <img src="./figures/workflow.png" alt="workflow" style="zoom:80%;" />
 
