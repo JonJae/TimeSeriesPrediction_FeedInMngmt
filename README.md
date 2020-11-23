@@ -67,4 +67,4 @@ The developed model can potentially be used as part of a Demand Side Managment s
 
 The performance of the investigated prediction models are measured using the Mean Average Percentage Error (MAPE). Based on this metric, an LSTM is the best performing model.  
 
-<img src="./figures/results_MAPE.png" alt="results_MAPE" style="zoom:80%;" />
+<img src="./figures/results_MAPE_test.png" alt="results_MAPE" style="zoom:80%;" />
