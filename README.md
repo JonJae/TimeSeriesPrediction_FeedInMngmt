@@ -23,11 +23,12 @@ The result of this project is a deep learning model that predicts lost power for
 
 ## Repo Organisation
 
-- [FeedInMngmt_presentation.pdf](FeedInMngmt_LSTM.ipynb): Presentation of the project including additional explenation about the feed-in managment sitatuion. 
-- [FeedInMngmt_EDA.ipynb](FeedInMngmt_EDA.ipynb): Loading and pre-processing feed-in managment data as well as weather data, price data and energy consumption data. Followed by an exploration of the given Data as well as an investigation of correlating behaivoir of various time series (e.g., the influence of wind on feed in management events). This document ends with a ranking and selection of features by their importance.  
-- [FeedInMngmt_ML.ipynb](FeedInMngmt_ML.ipynb): Creation and elaboration of train-validation-test split as well as design of two Naïve base-line models: the shift model (e.g., the next timestep equals the last time step ) and an  Exponential Smoothing model (e.g., next timestep equals the moving average over the last X hours). In addition, functions to evaluate the the results are described in this document.  
-- [FeedInMngmt_Prophet.ipynb](FeedInMngmt_Prophet.ipynb): Implementation, tuning and evaluation of a FB Prophet Model for for prediction of one timestep and multiple timesteps into the future. 
-- [FeedInMngmt_LSTM.ipynb](FeedInMngmt_LSTM.ipynb): Implementation, tuning and evaluation of a Long-Short-Term-Memory Recurrent Neural Network for prediction of one timestep and multiple timesteps into the future. 
+- [FeedInMngmt_Presentation.pdf](FeedInMngmt_Presentation.pdf): Presentation of the project including additional explanation about the feed-in managment sitatuion. (to be uploaded)
+- [FeedInMngmt_EDA.ipynb](FeedInMngmt_EDA.ipynb): Loading and pre-processing feed-in managment data as well as weather data, price data and energy consumption data. Followed by an exploration of the given data as well as an investigation of correlating behavior of various time series (e.g., the influence of wind on feed in management events). This document ends with a ranking and selection of features by their importance.  
+- [FeedInMngmt_Base_Models.ipynb](FeedInMngmt_Base_Models.ipynb): Creation and elaboration of train-validation-test split as well as design of two naive baseline models: the Shift model (e.g., the next timestep equals the last time step) and an  Exponential Smoothing model (e.g., next timestep equals the moving average over the last X hours). In addition, functions to evaluate the test results are described in this document.  
+- [FeedInMngmt_Prophet.ipynb](FeedInMngmt_Prophet.ipynb): Implementation and evaluation of a FB Prophet Model for the prediction of one timestep and multiple timesteps into the future. 
+- [FeedInMngmt_LSTM_NN.ipynb](FeedInMngmt_LSTM_NN.ipynb): Implementation and evaluation of a Long-Short-Term-Memory Recurrent Neural Network for the prediction of one timestep and multiple timesteps into the future. 
+- [FeedInMngmt_Results.ipynb](FeedInMngmt_Results.ipynb): Evaluation of the different models based on the chosen test metrics. 
 
 
 
@@ -63,8 +64,15 @@ The developed model can potentially be used as part of a Demand Side Managment s
 
 <img src="./figures/workflow.png" alt="workflow" style="zoom:80%;" />
 
-## Performance of the models
+## Outcome
 
-The performance of the investigated prediction models are measured using the Mean Average Percentage Error (MAPE). Based on this metric, an LSTM is the best performing model.  
+The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error (MAPE).
 
-<img src="./figures/results_MAPE_test.png" alt="results_MAPE" style="zoom:80%;" />
+![results_MAPE_test](./figures/results_MAPE_test.png)
+
+
+## Future Work
+
+**APIs for live predictions:** For live predictions of Feed-In Management loss, GFS Data, Feed-In  Management Data as well as Price and Consumption data need to be recieved via an application programming interface (API).  Services to consider include [eex Market API](https://www.eex.com/en/market-data/eex-group-datasource/api), [SMARD Strommarktdaten](https://www.smard.de/en/downloadcenter/download-market-data), [OpenWeather API](https://openweathermap.org/api), [climacell Weather Data](https://www.climacell.co/). 
+
+**Interpolation of inconsistent / artificial data April/Mai 2019:** In the Exploratory Data Analysis, inconsistent / artificial data was observered for parts of April/Mai 2019. In the current approach, the data was cut of at `2019-04-30 06:00:00` to avoide the model  being trained on artificial data. A interpolation of the data gap could  be done using a Standard Week or even a SARIMA model for the seasonal data (e.g., azimuth and elevation).
