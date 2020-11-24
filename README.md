@@ -54,9 +54,9 @@ A detailed view for the same features below.
 
 ##  Use Case overview
 
-The developed model can potentially be used as part of a Demand Side Managment scheduling software. The following visualisation describes the usecase for schedualed hydrogen production. 
+The developed model can potentially be used as part of a Demand Side Managment scheduling software. The following visualisation describes the usecase for schedualed hydrogen production. The hydrogen can then be used to power a fuel cell bus. 
 
-<img src="./figures/dsm_vis.png" alt="dsm_vis" style="zoom:80%;" />
+<img src="./figures/overview_DMS_FIM.png" alt="dsm_vis" style="zoom:80%;" />
 
 
 
