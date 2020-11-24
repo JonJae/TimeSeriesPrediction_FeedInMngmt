@@ -62,7 +62,7 @@ source_test = get_test_dataset(df_test, model, dataset)
 
 
 # changeable attributes
-plot = figure(x_axis_type="datetime", plot_width=1200, tools="", toolbar_location=None)
+plot = figure(x_axis_type="datetime", plot_width=1200, tools=["box_zoom", "reset"], toolbar_location="right")
 plot.title.text = title
 line_pred = plot.line(x="date", y=step, source = source_pred, line_color = "blue", legend_label="Predictions")
 line_actual = plot.line(x="date", y=step, source = source_test, line_color = "red", legend_label="Actual Values")
