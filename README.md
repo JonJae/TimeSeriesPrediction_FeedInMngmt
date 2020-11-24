@@ -62,13 +62,14 @@ The developed model can potentially be used as part of a Demand Side Managment s
 
 ## Approach to model design
 
-<img src="./figures/workflow.png" alt="workflow" style="zoom:80%;" />
+<img src="./figures/workflow.png" alt="workflow" style="zoom:110%;" />
 
 ## Outcome
 
-The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error (MAPE).
+The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error (MAPE), [static plot here](./figures/results_MAPE_test.png).
 
-![results_MAPE_test](./figures/results_MAPE_test.png)
+![results_MAPE_test](./figures/visualization_metrics_demo.gif)
+
 
 
 ## Future Work
