@@ -62,7 +62,9 @@ The developed model can potentially be used as part of a Demand Side Managment s
 
 ## Approach to model design and model integration
 
-<img src="./figures/workflow.png" alt="workflow" style="zoom:110%;" />
+![balance](./figures/workflow.png)
+
+
 
 ## Outcome
 
