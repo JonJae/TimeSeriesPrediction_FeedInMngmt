@@ -1,4 +1,4 @@
-# Quadra - Prediction of Renewable Power Loss caused by Feed-in Management Events
+# Prediction of Renewable Power Loss caused by Feed-in Management Events
 
 Final project at the Data Science Bootcamp **[@neuefische](www.neuefische.de)**. This project has been developed in 4 weeks in the fall of 2020 by Tjade Appel ([LinkedIn](www.linkedin.com/in/tjade-appel) / [GitHub](https://github.com/tjade27)) and Jonas Jaenicke ([LinkedIn](www.linkedin.com/in/jonasjaenicke) / [GitHub](https://github.com/JonJae)). Please feel free to contact us.  
 
