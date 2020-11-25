@@ -70,7 +70,7 @@ The performances of the investigated prediction models are measured using the Me
 
 ![results_MAPE_test](./figures/visualization_metrics_demo.gif)
 
-An interactive visualisation of the predictions can be started through the results notebook and is demonstrated below. Static view for [`LSTM univariate 10 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_uni_10steps.png) [`LSTM univariate 18 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_uni_18steps.png) [`LSTM multivariate 10 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_multi_10steps.png) [`LSTM multivariate 10 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_multi_18steps.png)
+An interactive visualisation of the predictions can be started through the results notebook and is demonstrated below. Static view for [`LSTM univariate 10 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_uni_10steps.png) [`LSTM univariate 18 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_uni_18steps.png) [`LSTM multivariate 10 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_multi_10steps.png) [`LSTM multivariate 18 Steps`](https://github.com/JonJae/FeedInMngmt_prediction/blob/main/figures/vis_prediction_multi_18steps.png)
 
 ![Results Predictionst](./figures/visualization_predictions_demo.gif)
 
