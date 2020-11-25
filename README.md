@@ -60,17 +60,19 @@ The developed model can potentially be used as part of a Demand Side Managment s
 
 
 
-## Approach to model design
+## Approach to model design and model integration
 
 <img src="./figures/workflow.png" alt="workflow" style="zoom:110%;" />
 
 ## Outcome
 
-The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error (MAPE), [static plot here](./figures/results_MAPE_test.png).
+The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error (MAPE), [static plot here](./figures/results_MAPE_test.png). The univariate LSTM neural network with peephole connections delivered the smallest mean absolute percentage error and was able to beat the chosen base models for all but the very first time step.
 
 ![results_MAPE_test](./figures/visualization_metrics_demo.gif)
 
+An interactive visualisation of the predictions can be started through the results notebook and is demonstrated below. 
 
+![Results Predictionst](./figures/visualization_predictions_demo.gif)
 
 ## Future Work
 
