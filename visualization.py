@@ -48,7 +48,7 @@ step = "Step 1"
 dataset = "Validation"
 title = "Predictions vs Actual Values for "+dataset+ " Set on "+step+ " calculated by "+model
 
-model_select = Select(value=model, title='Model', options=["Naive Shift Model", "Exponential Smoothing Model", "Prophet", "Multivariate_LSTM", "Univariate_LSTM", "Multivariate_LSTM_PeepHole", "Univariate_LSTM_PeepHole"])
+model_select = Select(value=model, title='Model', options=["Naive Shift Model", "Moving Average Model", "Prophet", "Multivariate_LSTM", "Univariate_LSTM", "Multivariate_LSTM_PeepHole", "Univariate_LSTM_PeepHole"])
 dataset_select = Select(value=dataset, title='Dataset', options=["Validation", "Test"])
 step_select = Select(value=step, title='Step', options=["Step 1","Step 2","Step 3","Step 4","Step 5","Step 6","Step 7",
                                                         "Step 8","Step 9","Step 10","Step 11","Step 12","Step 13","Step 14",
