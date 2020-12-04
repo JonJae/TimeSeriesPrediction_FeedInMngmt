@@ -26,7 +26,7 @@ The result of this project is a deep learning model that predicts lost power for
 
 ## Repo Organisation
 
-- [FeedInMngmt_Presentation.pdf](FeedInMngmt_Presentation.pdf): Presentation of the project including additional explanation about the feed-in managment sitatuion. (to be uploaded)
+- [FeedInMngmt_Presentation.pdf](FeedInMngmt_Presentation.pdf): Presentation of the project including additional explanation about the feed-in managment sitatuion.
 - [FeedInMngmt_EDA.ipynb](FeedInMngmt_EDA.ipynb): Loading and pre-processing feed-in managment data as well as weather data, price data and energy consumption data. Followed by an exploration of the given data as well as an investigation of correlating behavior of various time series (e.g., the influence of wind on feed in management events). This document ends with a ranking and selection of features by their importance.  
 - [FeedInMngmt_Base_Models.ipynb](FeedInMngmt_Base_Models.ipynb): Creation and elaboration of train-validation-test split as well as design of two naive baseline models: the Shift model (e.g., the next timestep equals the last time step) and an  Exponential Smoothing model (e.g., next timestep equals the moving average over the last X hours). In addition, functions to evaluate the test results are described in this document.  
 - [FeedInMngmt_Prophet.ipynb](FeedInMngmt_Prophet.ipynb): Implementation and evaluation of a FB Prophet Model for the prediction of one timestep and multiple timesteps into the future. 
